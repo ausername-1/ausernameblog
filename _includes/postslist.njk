@@ -8,7 +8,7 @@
         <div id="publisheddate" class="card-subtitle text-muted mb-2" datetime="{{ post.date | htmlDateString }}">
         {{ post.date | readableDate }}
          </div>
-         
+        <p class="card-text">{{ post.data.description }}</p>
    <a href="{{ post.url | url }}" class="btn btn-primary">Read More</a>
   </div>
 </div>

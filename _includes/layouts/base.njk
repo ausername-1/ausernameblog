@@ -35,7 +35,7 @@
   } else {
   rt = "Failed to calculate readtime!"
   }
-  document.getElementById('publisheddate').innerHTML = "Published on {{ date | readableDate }}"
+  document.getElementById('publisheddate').innerHTML = `Published on {{ date | readableDate }} 📌 ${rt}`
 </script>
 </body>
 </html>

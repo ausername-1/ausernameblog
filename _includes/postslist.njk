@@ -1,13 +1,16 @@
-<ul>
-  {% for post in postslist %}
-    <li>
-      <strong>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </strong>
-      -
-      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      -
-      <span>{{ post.data.description }}</span>
-    </li>
-  {% endfor %}
-</ul>
+<div class="row">
+ {% for post in postslist %}
+<div class="col-sm-4">
+<div class="card mt-2" style="width: 18rem;">
+  <img class="card-img-top" src="{{ featuredImage | url }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.data.title }}</h5>
+        <div class="card-subtitle text-muted mb-2" datetime="{{ post.date | htmlDateString }}">
+        {{ post.date | readableDate }}
+         </div>
+   <a href="{{ post.url | url }}" class="btn btn-primary">Read More</a>
+  </div>
+</div>
+</div>
+ {% endfor %}
+</div>

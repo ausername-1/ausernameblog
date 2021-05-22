@@ -29,7 +29,7 @@
       });
     }
        
-   var rt = Math.round("{{ content | safe}}".match(/.{1,5}/g).length/225);
+   var rt = Math.round("{{ description }}".match(/.{1,5}/g).length/225);
   if (rt <= 0) {
   rt = "Less than a minute read."
   } else if (rt === 1){

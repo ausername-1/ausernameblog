@@ -7,6 +7,8 @@ featuredImage: /images/uploads/image1.jpg
 ---
 Hello world first post over here!
 
+Here's some code for you!
+
 ```javascript
 const data = "some data over here"
 

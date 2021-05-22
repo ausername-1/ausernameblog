@@ -6,8 +6,10 @@
 </head>
 
 <body>
- <h1>ausername blog</h1>
-  {{ content | safe }}
+  <div class="container">
+    <h1 class="mb-4">ausername blog</h1>
+    {{ content | safe }}
+  </div>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {

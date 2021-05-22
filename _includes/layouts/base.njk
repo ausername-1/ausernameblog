@@ -25,7 +25,6 @@
       });
     }
        
-   if({{ description }}) {
    var rt = Math.round("{{ description }}".match(/.{1,5}/g).length/225);
   if (rt <= 0) {
   rt = "Less than a minute read."
@@ -36,10 +35,7 @@
   } else {
   rt = "Failed to calculate readtime!"
   }
-  document.getElementById('publisheddate').innerHTML = `Published on {{ date | readableDate }} 📌 ${rt}`   
-   } else {
-   
-   }
+   document.getElementById('publisheddate').innerHTML = `Published on {{ date | readableDate }} 📌 ${rt}`   
 </script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update
+  media_folder: "_site/images/uploads"
   collections:
  - name: "posts"        #The name of the collection and should match our posts.json file's tag
    label: "Posts"       #The name of the collection on the CMS itself
@@ -11,9 +15,4 @@
       - {label: "Date", name: "date", widget: "date", default: ""}
       - {label: "Post Body", name: "body", widget: "markdown"}
       - {label: "Featured Image", name: "featuredImage", widget: "image"}
-
-  backend:
-  name: git-gateway
-  branch: main # Branch to update
-  media_folder: "_site/images/uploads"
   public_folder: "/images/uploads"

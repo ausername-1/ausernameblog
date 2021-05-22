@@ -5,7 +5,7 @@
 <img class="card-image-top" src="{{ post.data.featuredImage | url }}" alt="{{post.data.title}}"></img>
   <div class="card-body">
     <h5 class="card-title">{{ post.data.title }}</h5>
-        <div class="card-subtitle text-muted mb-2" datetime="{{ post.date | htmlDateString }}">
+        <div id="publisheddate" class="card-subtitle text-muted mb-2" datetime="{{ post.date | htmlDateString }}">
         {{ post.date | readableDate }}
          </div>
    <a href="{{ post.url | url }}" class="btn btn-primary">Read More</a>

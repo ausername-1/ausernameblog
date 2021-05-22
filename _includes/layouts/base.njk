@@ -25,7 +25,10 @@
       });
     }
     
-   var rt = Math.round("{{ post.data.description | description }}".match(/.{1,5}/g).length/225);
+   let desc = {{ description }}
+   
+   if(desc) {
+   var rt = Math.round("{{ description }}".match(/.{1,5}/g).length/225);
   if (rt <= 0) {
   rt = "Less than a minute read."
   } else if (rt === 1){
@@ -35,7 +38,10 @@
   } else {
   rt = "Failed to calculate readtime!"
   }
-  document.getElementById('publisheddate').innerHTML = `Published on {{ date | readableDate }} 📌 ${rt}`
+  document.getElementById('publisheddate').innerHTML = `Published on {{ date | readableDate }} 📌 ${rt}`   
+   } else {
+   
+   }
 </script>
 </body>
 </html>

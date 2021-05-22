@@ -3,6 +3,6 @@
 ---
 
 <h2>{{ title }}</h2>
-<h3 class="subtitle text-muted mb-2">Published on {{ date | readableDate }}</h3>
+<div class="subtitle text-muted mb-2">Published on {{ date | readableDate }}</div>
 <img src="{{ featuredImage | url }}" alt="{{title}}"></img>
 <p>{{ content | safe}}</p>

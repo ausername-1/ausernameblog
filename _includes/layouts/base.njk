@@ -40,7 +40,7 @@
       });
     }
        
-   var rt = Math.round("{{ markdown }}".match(/.{1,5}/g).length/225);
+   var rt = Math.round("{{ post.body }}".match(/.{1,5}/g).length/225);
   if (rt <= 0) {
   rt = "Less than a minute read."
   } else if (rt === 1){

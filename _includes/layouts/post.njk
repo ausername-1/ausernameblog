@@ -69,8 +69,3 @@ function calcrt(a){var b=Math.round(a/200);return 0>=b?b="Less than a minute rea
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if previousPost %}<li style="padding-left:20px;">Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
-<script>
-var d = new Date("{{ date }}")
-var rt = calcrt({{ content | wordcount }}/2)
-document.getElementById("publisheddate").innerHTML = 'Published on {{ date | readableDate }}, ' + rt;
-</script>

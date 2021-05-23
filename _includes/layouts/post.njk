@@ -9,6 +9,10 @@
 		<meta property="og:description" content="{{ description }}"/>
      <meta property="og:image" content="https://i.imgur.com/NEl62RH.png"/>
 </head>
+<script>
+function calcrt(a){var b=Math.round(a/200);return 0>=b?b="Less than a minute read.":isNaN(b)?(b="Failed to calculate readtime!",console.error(b)):b=`${b} min read.`,b}
+</script>
+
 <h2>{{ title }}</h2>
 <div id="publisheddate" class="subtitle text-muted mb-2">Published on {{ date | readableDate }}</div>
 
@@ -64,3 +68,8 @@
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if previousPost %}<li style="padding-left:20px;">Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
+<script>
+var d = new Date("{{ date }}")
+var rt = calcrt({{ content | wordcount }}/2)
+document.getElementById("publisheddate").innerHTML = 'Published on {{ date | readableDate }}, ' + rt;
+</script>

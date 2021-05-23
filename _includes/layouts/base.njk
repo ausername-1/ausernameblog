@@ -38,18 +38,7 @@
         }
       });
     }
-       
-   var rt = Math.round("{{ description }}".match(/.{1,5}/g).length/225);
-  if (rt <= 0) {
-  rt = "Less than a minute read."
-  } else if (rt === 1){
-  rt = `${rt} min read.`
-  } else if (isNaN(rt)){
-  rt = "Failed to calculate readtime!"
-  } else {
-  rt = "Failed to calculate readtime!"
-  }
-   document.getElementById('publisheddate').innerHTML = `Published on {{ date | readableDate }} 📌 ${rt}`   
+        
 </script>
           <script src=
 "https://code.jquery.com/jquery-3.3.1.slim.min.js" i

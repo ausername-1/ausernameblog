@@ -19,4 +19,11 @@ module.exports = function(eleventyConfig) {
     }).toFormat("dd-MM-yy");
   });
 
+    eleventyConfig.addFilter("head", (array, n) => {
+    if (n < 0) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  });
 };

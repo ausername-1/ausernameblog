@@ -56,3 +56,11 @@
             </div>
         </div>
 <p>{{ content | safe}}</p>
+
+<hr>
+<ul style="padding-left:20px;">
+  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+  {%- if nextPost %}<li style="padding-left:20px;">Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+  {%- if previousPost %}<li style="padding-left:20px;">Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+</ul>

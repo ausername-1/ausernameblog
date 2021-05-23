@@ -1,5 +1,4 @@
 <div class="row">
- {% for post in postslist %}
 {% for post in postslist | reverse %}
 <div class="col-sm-4">
 <div class="card mt-2" style="width: 18rem;">
@@ -19,3 +18,4 @@
    <a href="{{ post.url | url }}" class="btn btn-primary">Read More</a>
   </div>
 </div>
+{% endfor %}

@@ -29,6 +29,10 @@
 <a href="https://simpleanalytics.com/adoring-curran-7f83bf.netlify.app?utm_source=adoring-curran-7f83bf.netlify.app&utm_content=badge" referrerpolicy="origin" target="_blank"><img src="https://simpleanalyticsbadge.com/adoring-curran-7f83bf.netlify.app?mode=dark" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" /></a>  </center>
   </footer>
   <script>
+var rt = calcrt({{ content | wordcount }}/2)
+document.getElementById("publisheddate").innerHTML = 'Published on {{ date | readableDate }}, ' + rt;
+</script>
+  <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {

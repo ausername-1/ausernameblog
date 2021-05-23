@@ -7,7 +7,6 @@
         {{ post.date | readableDate }}
          </div>
         <p class="card-text">{{ post.data.description }}</p>
-            {% for tag in post.data.tags %}
      {% for tag in post.data.tags %}
       {%- if collections.tagList.indexOf(tag) != -1 -%}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}

@@ -1,7 +1,14 @@
 ---
  layout: layouts/base.njk
 ---
-
+<head>
+	<meta property="og:title" content="ausername blog | {{ title }}"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="{{ url }}"/>
+		<meta property="og:site_name" content="ausername blog"/>
+		<meta property="og:description" content="{{ description }}"/>
+     <meta property="og:image" content="https://i.imgur.com/NEl62RH.png"/>
+</head>
 <h2>{{ title }}</h2>
 <div id="publisheddate" class="subtitle text-muted mb-2">Published on {{ date | readableDate }}</div>
 

@@ -9,6 +9,12 @@
         {{ post.date | readableDate }}
          </div>
         <p class="card-text">{{ post.data.description }}</p>
+            {% for tag in post.data.tags %}
+      {%- if collections.tagList.indexOf(tag) != -1 -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <span class="badge"><a href="{{ tagUrl | url }}" class="post-tag badge-pill">{{ tag }}</a></span>&nbsp;
+      {%- endif -%}
+    {% endfor %}
    <a href="{{ post.url | url }}" class="btn btn-primary">Read More</a>
   </div>
 </div>

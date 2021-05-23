@@ -30,7 +30,7 @@
   </footer>
   <script>
 var rt = calcrt({{ content | wordcount }}/2)
-document.getElementById("publisheddate").innerHTML = 'Published on {{ date | readableDate }}, ' + rt;
+document.getElementById("publisheddate").innerHTML = 'Published on {{ date | readableDate }} 📌 ' + rt;
 </script>
   <script>
     if (window.netlifyIdentity) {

@@ -1,0 +1,7 @@
+[build]
+  publish = "_site"
+  command = "npx @11ty/eleventy"
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404

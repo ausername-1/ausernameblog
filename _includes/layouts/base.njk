@@ -12,8 +12,10 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="mb-4">ausername blog</h1>
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+  <h1 class="mb-4">ausername blog</h1>
     <a href="#">C:</a>
     /
     <a href="/">Home</a>
@@ -23,6 +25,7 @@
     <a href="{{ url }}">{{ title }}</a>
     </nav>
     {{ content | safe }}
+  </div>
   </div>
   <footer>
   <center>

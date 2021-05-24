@@ -27,28 +27,32 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n);
   });
   
-    eleventyConfig.addCollection("tagList", collection => {
-    const tagsObject = {}
-    collection.getAll().forEach(item => {
-      if (!item.data.tags) return;
-      item.data.tags
-        .filter(tag => !['post', 'all'].includes(tag))
-        .forEach(tag => {
-          if(typeof tagsObject[tag] === 'undefined') {
-            tagsObject[tag] = 1
-          } else {
-            tagsObject[tag] += 1
+
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(function(item) {
+      if ("tags" in item.data) {
+        let tags = item.data.tags;
+
+        tags = tags.filter(function(item) {
+          switch (item) {
+            // this list should match the `filter` list in tags.njk
+            case "all":
+            case "nav":
+            case "post":
+            case "posts":
+              return false;
           }
+
+          return true;
         });
+
+        for (const tag of tags) {
+          tagSet.add(tag);
+        }
+      }
     });
 
-    const tagList = []
-    Object.keys(tagsObject).forEach(tag => {
-      tagList.push({ tagName: tag, tagCount: tagsObject[tag] })
-    })
-    return tagList.sort((a, b) => b.tagCount - a.tagCount)
-
-  });
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {

@@ -17,6 +17,8 @@ permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1
 </div>
 </center>
 
-{% set postslist = collections.posts | head(-5) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+{% block body %}
+
+  {% include "nav.njk" %}
+  
+{% endblock %}

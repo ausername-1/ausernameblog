@@ -1,5 +1,5 @@
-<div class="w-400 mw-full"> 
 {% for post in postslist | reverse %}
+ <div class="w-400 mw-full"> 
   <div class="card p-0"> 
   <img class="img-fluid rounded-top" src="{{ post.data.featuredImage | url }}" alt="{{title}}"></img>
   
@@ -18,5 +18,5 @@
       </div>
   </div>
 </div>
- {% endfor %}
 </div>
+ {% endfor %}

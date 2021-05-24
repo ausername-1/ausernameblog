@@ -1,11 +1,6 @@
 ---
-layout: layouts/base.njk
-pagination:
-  data: collections.post
-  size: 6
-  alias: posts
-  reverse: true
-permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+layout: layouts/base.njk 
+permalink: /
 ---
 <center>
 <div class="alert alert-secondary" role="alert" style="width: 220px;">
@@ -17,8 +12,6 @@ permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1
 </div>
 </center>
 
-{% block body %}
-
-  {% include "nav.njk" %}
-  
-{% endblock %}
+{% set postslist = collections.posts | head(-5) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslist.njk" %}

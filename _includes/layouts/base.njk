@@ -12,7 +12,11 @@
 </head>
 
 <body>
-<nav aria-label="Breadcrumb navigation example">
+<div class="page-wrapper">
+  <!-- Modal toggle inside the content wrapper -->
+  <div class="content-wrapper">
+  <h1 class="mb-4">ausername blog</h1>
+  <nav aria-label="Breadcrumb navigation example">
   <ul class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">C:</a></li>
     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -20,10 +24,6 @@
     <li class="breadcrumb-item active" aria-current="page"><a href="{{ url }}">{{ title }}</a></li>
   </ul>
 </nav>
-<div class="page-wrapper">
-  <!-- Modal toggle inside the content wrapper -->
-  <div class="content-wrapper">
-  <h1 class="mb-4">ausername blog</h1>
     {{ content | safe }}
   </div>
   </div>

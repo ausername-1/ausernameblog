@@ -28,30 +28,28 @@ module.exports = function(eleventyConfig) {
   });
   
 
-  eleventyConfig.addCollection("tagList", function(collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(function(item) {
-      if ("tags" in item.data) {
-        let tags = item.data.tags;
-
-        tags = tags.filter(function(item) {
-          switch (item) {
-            // this list should match the `filter` list in tags.njk
-            case "all":
-            case "nav":
-            case "post":
-            case "posts":
-              return false;
+    eleventyConfig.addCollection("tagList", collection => {
+    const tagsObject = {}
+    collection.getAll().forEach(item => {
+      if (!item.data.tags) return;
+      item.data.tags
+        .filter(tag => !['all'].includes(tag))
+        .forEach(tag => {
+          if(typeof tagsObject[tag] === 'undefined') {
+            tagsObject[tag] = 1
+          } else {
+            tagsObject[tag] += 1
           }
-
-          return true;
         });
-
-        for (const tag of tags) {
-          tagSet.add(tag);
-        }
-      }
     });
+
+    const tagList = []
+    Object.keys(tagsObject).forEach(tag => {
+      tagList.push({ tagName: tag, tagCount: tagsObject[tag] })
+    })
+    return tagList.sort((a, b) => b.tagCount - a.tagCount)
+
+  });
 
 
   eleventyConfig.setBrowserSyncConfig({

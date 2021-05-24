@@ -1,6 +1,11 @@
 ---
  layout: layouts/base.njk
- permalink: /
+ pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+  reverse: true
+permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 <center>
 <div class="alert alert-secondary" role="alert" style="width: 220px;">

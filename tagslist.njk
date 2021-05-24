@@ -1,0 +1,21 @@
+---
+title: List of all tags
+layout: layouts/base.njk
+permalink: /tags/
+eleventyNavigation:
+  key: Tags
+  weight: 1
+---
+
+<div class="container">
+
+  <h1>All Tags</h1>
+
+  <div class="card-grid">
+    {% for tag in collections.tagList %}
+    <ul>
+    <li><a href="{{ '/tags/' | url }}{{ tag.tagName | slug }}">{{ tag.tagName }}</a></li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>

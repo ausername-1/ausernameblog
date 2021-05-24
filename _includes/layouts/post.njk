@@ -28,9 +28,9 @@ function calcrt(a){var b=Math.round(a/200);return 0>=b?b="Less than a minute rea
     </div>
   </div>
 </div>
-	
-<img src="{{ featuredImage | url }}" alt="{{title}}" style="cursor: pointer" data-toggle="modal"  data-target=".bd-example-modal-lg"></img>
-
+  <a href="#modal-4">
+      <img src="{{ featuredImage | url }}" alt="{{ title }}" class="img-fluid rounded" width="100" alt="modal-img-thumbnail">
+ </a>
 <p>{{ content | safe}}</p>
 
 <hr>

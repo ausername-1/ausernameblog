@@ -9,18 +9,18 @@
         <h2 class="content-title">
          {{ post.data.title }}
      </h2>
-           {% for tag in post.data.tags %}
-          {% if tag != 'post' %}
-            <span class="badge">{{ tag }}</span>
-            {%- if not loop.last %}, {% endif %}
-          {% endif %}
-        {% endfor %}
         <span class="text-muted">
           <i class="fa fa-clock-o mr-5" aria-hidden="true"></i> {{ post.date | readableDate }}
       </span>
      <p class="text-muted">
      {{ post.data.description }}
    </p>
+       {% for tag in post.data.tags %}
+      {%- if collections.tagList.indexOf(tag) != -1 -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <span class="badge"><a href="{{ tagUrl | url }}" class="post-tag badge-pill">{{ tag }}</a></span>&nbsp;
+      {%- endif -%}
+    {% endfor %}
      <div class="text-left"> <!-- text-right = text-align: right -->
         <a href="{{ post.url | url }}" class="btn">Read more</a>
       </div>

@@ -9,8 +9,8 @@ Hello world!
 
 I'm **ausername** and this blog is **ausername.dev** In this blog we'll trying to cover the following topics:
 
-* What we'll cover:
+* Code issues of viewers
 
-  Code issues of viewers
+  * Full on tutorials on how to create your own website!
 
-  Full on tutorials on how to create your own website!
+    Happy coding!

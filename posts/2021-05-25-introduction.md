@@ -7,7 +7,7 @@ featuredImage: /images/uploads/download-1-.jpg
 ---
 Hello world!
 
-I'm **ausername** and this blog is **ausername.dev** In this blog we'll trying to cover the following topics:
+I'm **ausername** and this blog is **ausername.dev** In this blog we'll be trying to cover the following topics:
 
 * Code issues of viewers
 

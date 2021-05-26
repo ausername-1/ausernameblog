@@ -7,10 +7,6 @@ featuredImage: /images/uploads/download-1-.jpg
 ---
 Hello world!
 
-I'm **ausername** and this blog is **ausername.dev** In this blog we'll be trying to cover the following topics:
+I'm **ausername** and this blog is **ausername.dev** In this blog we'll be trying to solve code issues of viewers and create full on tutorials on how to make your own website! However I ran out of words so....
 
-* Code issues of viewers
-
-  * Full on tutorials on how to create your own website!
-
-    Happy coding!
+Happy coding and remember to always press <kbd>ALT</kbd> + <kbd>F4</kbd>!

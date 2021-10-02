@@ -33,3 +33,13 @@ First we'll start our project by running `npm init` and then we'll create a fold
 import fetch from 'node-fetch';
 import { Webhook, MessageBuilder } from 'discord-webhook-node';
 ```
+
+This code does nothing at all by it self lets spice it up by adding:
+
+```javascript
+async function DoAtOnce {
+setTimeout(() => {
+ const IntialData = await fetch('https://www.supremenewyork.com/mobile_stock.json').then((res => res.json()))
+}, 2000)
+}
+```

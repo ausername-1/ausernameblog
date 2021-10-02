@@ -13,6 +13,8 @@ a monitor in this instance is not a PC monitor in this scenario a monitor is an 
 
 This will be the topic of this exact article, 
 
+We'll be making a supreme monitor
+
 Some things we'll before starting will be:
 
 Node.js (LTS version as of writing this article it is 14.18.0)
@@ -23,7 +25,9 @@ Some basic understanding of Node.js
 
 
 
-Alright let's get started, with our base code:
+Alright let's get started:
+
+First we'll start our project by running `npm init` and then we'll create a folder named `index.js` and then run `npm i node-fetch discord-webhook-node` to install our dependances and then inside of our `index.js` file we'll write for our base code
 
 ```javascript
 import fetch from 'node-fetch';

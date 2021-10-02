@@ -28,5 +28,4 @@ Alright let's get started, with our base code:
 ```javascript
 import fetch from 'node-fetch';
 import { Webhook, MessageBuilder } from 'discord-webhook-node';
-
 ```

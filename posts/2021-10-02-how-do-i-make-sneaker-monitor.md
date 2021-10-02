@@ -25,10 +25,6 @@ Some basic understanding of Node.js
 
 Alright let's get started, with our base code:
 
-\`\`js
+`js `
 
-import fetch from 'node-fetch';
-
-import { Webhook, MessageBuilder } from 'discord-webhook-node';
-
-\`\`
+`import hello from 'hello';`

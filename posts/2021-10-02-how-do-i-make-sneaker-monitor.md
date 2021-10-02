@@ -27,7 +27,7 @@ Some basic understanding of Node.js
 
 Alright let's get started:
 
-First we'll start our project by running `npm init` and then we'll create a folder named `index.js` and then run `npm i node-fetch discord-webhook-node` to install our dependances and then inside of our `index.js` file we'll write for our base code
+First we'll start our project by running `npm init` and then we'll create a folder named `index.js` and then run `npm i node-fetch discord-webhook-node` to install our dependances and then inside of our `index.js` file we'll write for our base code:
 
 ```javascript
 import fetch from 'node-fetch';

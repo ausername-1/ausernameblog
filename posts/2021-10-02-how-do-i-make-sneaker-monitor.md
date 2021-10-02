@@ -9,8 +9,6 @@ featuredImage: /images/uploads/sneaker-bots.jpeg
 
 a monitor in this instance is not a PC monitor in this scenario a monitor is an application that notifies you when a new product drops or restocks in a certain site (eg. supreme, yeezysupply, footsites, etc.) usually a monitor notifies you via discord webhooks.
 
-
-
 ## Alright but how do I make a monitor?
 
 This will be the topic of this exact article, 
@@ -22,3 +20,15 @@ Node.js (LTS version as of writing this article it is 14.18.0)
 Code editor (we'll be using VSCode)
 
 Some basic understanding of Node.js
+
+
+
+Alright let's get started, with our base code:
+
+\`\``js
+
+import fetch from 'node-fetch';
+
+import { Webhook, MessageBuilder } from 'discord-webhook-node';
+
+\`\``
